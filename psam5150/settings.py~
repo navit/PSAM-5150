@@ -116,8 +116,11 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'signupform',
+<<<<<<< HEAD
     'gameshow',
+=======
     'russia',
+>>>>>>> hello
     )
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 

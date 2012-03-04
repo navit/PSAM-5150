@@ -1,0 +1,31 @@
+generic views
+
+
+class base view
+ get context data
+
+ it makes more sense to create a class based view. 
+
+> create an external style sheet.
+
+
+> every request can be a get or a post method
+
+> generic view- is a class based
+
+> where as a view based on a function does both at the same time.
+
+> there is aget url and a post url...you can not 'get' on a 'post' url ---- it is an error!
+
+> get- renders the context data- two line get methods. 
+
+> post- validates the form....if it is not valid it passes the errors.
+
+
+> team choices: nested touple.  its like mr or mrs.  first part is computer second part is human.
+
+> pdb- debagger 
+
+> 
+
+
