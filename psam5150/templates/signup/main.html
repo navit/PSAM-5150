@@ -2,22 +2,43 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>{% block title %}{{ title|capfirst }} Signup {% endblock %}</title>
+
+    <title>{% block title %}{{ title|capfirst }} Signup{% endblock %}</title>
+    
+    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    <style>
+        #container { width:50%; margin:1em auto; background:white; border:2px solid black; padding:20px; }
+    
+    </style>
+    
 </head>
 <body>
-<a href="{% url signup_main %}">Signup Home</a>
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% block body %}
-<ul>
-    <li><a href="{% url hello_world %}">Hello World</a></li>
-    <li><a href="{% url site_signup %}">Site Signup</a></li>
-</ul>
-{% endblock %}
+    <div id="container">
+        <a href="{% url signup_main %}">Signup Home</a>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% block body %}
+        <ul>
+            <li><a href="{% url hello_world %}">Hello World</a></li>
+            <li><a href="{% url site_signup %}">Signup</a></li>
+            <li><a href="{% url site_contactdetails %}">Contact Details</a></li>
+        		<style type="text/css">
+                	a:link {
+                	font-size: 17px;
+                	line-height: 25px;
+                	text-decoration: none;
+                	font-family: Georgia, Geneva, Arial, SunSans-Regular, sans-serif}
+                	a:visited {
+                	color: black;
+                	}
+            	</style>
+        </ul>
+        {% endblock %}
+    </div>
 </body>
 </html>

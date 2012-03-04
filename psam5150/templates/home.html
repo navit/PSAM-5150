@@ -1,13 +1,44 @@
 <html>
 <head>
-    <title>Welcome To Our Django Site</title>
+    <title>Welcome To My First Form</title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    
+    <style>
+        #container { width:50%; margin:1em auto; background:black; border:5px solid black; padding:20px; }
+
+    </style>
+
 
 </head>
 <body>
-<h1>Hello for now!</h1>
-<ul>
-    <li><a href="{% url signup_main %}">Signup Form</a></li>
-    <li><a href="{% url game_main %}">Play a Game</a></li>
-</ul>
+    <div id="container">
+        <!--<h1>Welcome To My First Form</h1>
+            <style type="text/css">
+                h1 {
+                font-family: Georgia, Geneva, Arial, SunSans-Regular, sans-serif;
+                font-size: 300%; 
+                font-style: italic;
+                }
+            </style>-->
+         <ul>
+            <a href="{% url signup_main %}"><h1>Welcome To My First Form</h1></a>
+             <style type="text/css">
+                h1 {
+                font-family: Georgia, Geneva, Arial, SunSans-Regular, sans-serif;
+                font-size: 50px; 
+                font-style: italic;
+                font-weight: normal;}
+
+                a:link {
+                text-decoration: none;
+                
+                }
+                a:visited {
+                color: #FFD040;
+                }
+            </style>
+
+         </ul>
+    </div>
 </body>
 </html>
