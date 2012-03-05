@@ -4,10 +4,10 @@ from russia.models import Signup
 from russia.models import ContactDetails
 
 
-class HelloWorldForm(forms.Form):
-    name = forms.CharField(max_length=100)
-    location = forms.CharField(max_length=200)
-    message = forms.CharField(widget=forms.Textarea)
+#class HelloWorldForm(forms.Form):
+    #name = forms.CharField(max_length=100)
+   # location = forms.CharField(max_length=200)
+   # message = forms.CharField(widget=forms.Textarea)
 
 class SignupForm(forms.ModelForm):
 

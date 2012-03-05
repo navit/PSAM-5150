@@ -4,8 +4,8 @@ from django.contrib.sites.models import get_current_site
 from django.shortcuts import redirect
 from django.contrib import messages
 
-from russia.forms import HelloWorldForm, SignupForm, ContactDetailsForm
-from russia.models import HelloWorld # why are we importing just that class
+from russia.forms import SignupForm, ContactDetailsForm
+#from russia.models import HelloWorld # why are we importing just that class
 
 
 def home(request):
@@ -17,24 +17,24 @@ def signuphome(request):
     return render_to_response('signup/main.html', {'title': oursite.name}, context_instance=RequestContext(request))
 
 
-def helloworld(request):
-    if request.method == 'POST':
-        form = HelloWorldForm(request.POST)
-        if form.is_valid():
-            our_hello_world = HelloWorld()
-            our_hello_world.name = form.cleaned_data['name']
-            our_hello_world.location = form.cleaned_data['location']
-            our_hello_world.message = form.cleaned_data['message']
-            our_hello_world.save()
-            return redirect('hello')
-    else:
-        form = HelloWorldForm()
-    return render_to_response('signup/helloworld.html', {'form': form}, context_instance=RequestContext(request))
+#def helloworld(request):
+   # if request.method == 'POST':
+    #    form = HelloWorldForm(request.POST)
+     #   if form.is_valid():
+      #      our_hello_world = HelloWorld()
+       #     our_hello_world.name = form.cleaned_data['name']
+        #    our_hello_world.location = form.cleaned_data['location']
+         #   our_hello_world.message = form.cleaned_data['message']
+          #  our_hello_world.save()
+           # return redirect('hello')
+   # else:
+    #    form = HelloWorldForm()
+    #return render_to_response('signup/helloworld.html', {'form': form}, context_instance=RequestContext(request))
 
 
-def hello(request):
-    last_hellos = HelloWorld.objects.all().order_by('-created_on')
-    return render_to_response('signup/hello.html', {'hellos': last_hellos}, context_instance=RequestContext(request))
+#def hello(request):
+ #   last_hellos = HelloWorld.objects.all().order_by('-created_on')
+  #  return render_to_response('signup/hello.html', {'hellos': last_hellos}, context_instance=RequestContext(request))
 
 
 def sitesignup(request):
