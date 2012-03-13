@@ -1,16 +1,15 @@
-{% extends "signup/main.html" %}
+{% extends "censustemp/main.html" %}
 
 {% block title %}{{ title|capfirst }} Contact yipee! {% endblock %}
 
 {% block body %}
-    <form enctype="multipart/form-data" action="{% url sitecontactdetails %}" method="post">
+    <form enctype="multipart/form-data" action="{% url sitecensusinfo %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-
         <input type="submit" value="Submit" />
-        <style type="text/css">
+         <style type="text/css">
                     a:link {
-                    font-size: 17px;
+                    font-size: 20px;
                     text-decoration: none;
                     font-family: 'PT Mono';}
                     a:visited {
@@ -20,8 +19,8 @@
                     font-size: 15px;
                     font-family: 'PT Mono';	
                     }
-
+                    
+                
                 </style>
-
         </form>
 {% endblock %}

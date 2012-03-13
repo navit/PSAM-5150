@@ -1,4 +1,4 @@
-{% extends "signup/main.html" %}
+<!--{% extends "signup/main.html" %}
 
 {% block title %}{{ title|capfirst }} Signup yipee! {% endblock %}
 
@@ -7,5 +7,6 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Submit" />
+        
         </form>
 {% endblock %}

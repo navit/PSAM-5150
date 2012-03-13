@@ -4,11 +4,13 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'signupform.views.home', name='home'),
-   #url(r'^$', 'russia.views.home', name='site_contactdetails'),
-    url(r'^russia/', include('russia.urls')),
-    url(r'^signup/', include('signupform.urls')),
-    url(r'^gameshow/', include('gameshow.urls')),
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^$', 'russia.views.home', name='home'),
+    url(r'^signup/', include('russia.urls')),
+
+    url(r'^$', 'census.views.home', name='home'),
+    url(r'^censustemp/', include('census.urls')),
+    
+    #url(r'^gameshow/', include('gameshow.urls')),
+    #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
