@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     #url(r'^hello$', 'russia.views.hello', name='hello'),
     #url(r'^$', 'russia.views.sitecontactdetails', name='site_contactdetails'),
     url(r'^ CensusInfo/$', 'census.views.sitecensusinfo', name='sitecensusinfo'),
+    
    
 
 )

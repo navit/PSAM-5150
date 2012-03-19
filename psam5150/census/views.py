@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 from django.contrib import messages
 
 from census.forms import CensusInfoForm
+#from census.forms import ChoiceForm
 
 
 def home(request):
@@ -26,5 +27,18 @@ def sitecensusinfo(request):
     else:
         form = CensusInfoForm()
     return render_to_response('censustemp/censusinfo.html', {'form': form}, context_instance=RequestContext(request))
+
+
+#def sitechoice(request):
+  #  if request.method == 'POST':
+   #     form = ChoiceForm(request.POST, request.FILES)
+    #    if form.is_valid():
+   #         form.save()
+      #      messages.add_message(request, messages.INFO, "Your form has been submitted and will be processed in the order it was received")
+       #     return redirect('censustemp_main')
+  #  else:
+   #     form = ChoiceForm()
+  #  return render_to_response('censustemp/choice.html', {'form': form}, context_instance=RequestContext(request))
+
 
 
