@@ -7,7 +7,9 @@ urlpatterns = patterns('',
     #url(r'^sign_up/$', 'russia.views.sitesignup', name='site_signup'),
     #url(r'^hello$', 'russia.views.hello', name='hello'),
     #url(r'^$', 'russia.views.sitecontactdetails', name='site_contactdetails'),
-    url(r'^ CensusInfo/$', 'census.views.sitecensusinfo', name='sitecensusinfo'),
+    url(r'^CensusInfo/$', 'census.views.sitecensusinfo', name='sitecensusinfo'),
+    url(r'^results/$', 'census.views.censusresults', name='censusresults'),
+
     
    
 

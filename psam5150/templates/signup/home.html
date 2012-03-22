@@ -1,0 +1,51 @@
+<html>
+<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<head>
+    
+         <style type="text/css">
+             body {
+             background-color: black; }
+    
+         </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <a href="{% url home %}"><h1>Navit's Web Stuff</h1></a>
+          <style type="text/css">
+                h1 {
+                margin-left:35px;
+                margin-top: 40px;
+                font-family: 'PT Mono';
+                font-size: 35px;
+                font-style: normal;
+                font-weight: normal;
+                color: #FFD040;
+                }
+            </style>
+        
+        <ul>
+            <a href="about.asp">About</a>
+            <a href="{% url signup_main %}">Contact Form</a>
+            <a href="{% url censustemp_main %}">Census</a>
+        
+            <style type="text/css">
+               a:link {
+                display: block;
+                color: #CD0074;
+                font-family: 'PT Mono';
+                font-size: 17px;
+                line-height: 25px;
+                text-decoration: none;
+                }
+                a:visited {
+                color: #CD0074;
+                }
+            </style>
+      
+         </ul>
+    </div>
+</body>
+</html>

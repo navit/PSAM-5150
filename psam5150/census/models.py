@@ -4,6 +4,7 @@ from django.db import models
 GENDER_CHOICES = (
     ('M', 'Male'),
     ('F', 'Female'),
+    ('O', 'Other'),
     )
 
 YEAR_IN_SCHOOL_CHOICES = (
@@ -12,7 +13,7 @@ YEAR_IN_SCHOOL_CHOICES = (
     ('JR', 'Junior'),
     ('SR', 'Senior'),
     ('GR', 'Graduate'),
-)
+    )
 
 MARITAL_CHOICES = (
     ('SG', 'Single'),
@@ -21,14 +22,21 @@ MARITAL_CHOICES = (
     ('WI', 'Widowed'),
 
     )
+EMPLOYMENT_STATUS_CHOICES =(
+    ('EM', 'Employed'),
+    ('UD', 'Under Employed'),
+    ('UN', 'Un Employed'),
+
+    )
     
 
 class CensusInfo(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=100)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    marital_status = models.CharField(max_length=1, choices=MARITAL_CHOICES)
-    education = models.CharField(max_length=1, choices=YEAR_IN_SCHOOL_CHOICES)
+    gender = models.CharField(max_length=3, choices=GENDER_CHOICES)
+    marital_status = models.CharField(max_length=3, choices=MARITAL_CHOICES)
+    education = models.CharField(max_length=3, choices=YEAR_IN_SCHOOL_CHOICES)
+    employment_status = models.CharField(max_length=3, choices=EMPLOYMENT_STATUS_CHOICES)
     email = models.EmailField()
     phone = models.PositiveIntegerField(max_length=100)
     street_address = models.CharField(max_length=100)
