@@ -31,6 +31,7 @@ def sitecensusinfo(request):
 
 def censusresults(request):
     peoplecount = len(CensusInfo.objects.all())
-    return render_to_response('censustemp/results.html', {'people': peoplecount,})
+    malecount = len(CensusInfo.objects.filter(gender = 'M', employment_status ='UN'))
+    return render_to_response('censustemp/results.html', {'people': peoplecount, 'male': malecount})
 
 

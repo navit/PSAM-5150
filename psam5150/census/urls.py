@@ -10,7 +10,6 @@ urlpatterns = patterns('',
     url(r'^CensusInfo/$', 'census.views.sitecensusinfo', name='sitecensusinfo'),
     url(r'^results/$', 'census.views.censusresults', name='censusresults'),
 
-    
    
 
 )

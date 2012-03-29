@@ -9,8 +9,12 @@ urlpatterns = patterns('',
 
     url(r'^$', 'census.views.home', name='home'),
     url(r'^censustemp/', include('census.urls')),
+
+    url(r'^appointment/', include('appointments.urls')),
     
     #url(r'^gameshow/', include('gameshow.urls')),
-    #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+   
 )

@@ -119,7 +119,10 @@ INSTALLED_APPS = (
     #'gameshow',
     'russia',
     'census',
+    'appointments',
+    
     )
+
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 FILE = ("django.core.files.uploadhandler.MemoryFileUploadHandler",
